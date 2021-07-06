@@ -1,4 +1,5 @@
 import React from "react";
+import CurrentDate from "./date";
 class Clock extends React.Component {
     constructor(props) {
         super(props);
@@ -21,6 +22,7 @@ class Clock extends React.Component {
     render() {
         return (<div>
             <h1>Current time-{this.state.currentDate.toLocaleTimeString()}</h1>
+            <CurrentDate date={this.state.currentDate}/>
         </div>);
     }
 }
